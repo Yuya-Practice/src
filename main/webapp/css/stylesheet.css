@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+.title {
+    background-color: midnightblue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-btn {
+	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+}
+
+.rightlow, .back {
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+}
+
+button {
+	margin: 3% 0%;
+	width: 100%;
+	max-width: 340px;
+	padding: 15px 10px;
+	display: inline-block;
+	text-align: center;
+	letter-spacing: 0.1em;
+	color: #fff;
+	background-color: #ed576c;
+}
+
+.form-dl dt {
+  	float: left;
+}
+.form-dl dd {
+	margin-left: 80px;
+}
+
+input#select-btn, input#insert-btn, input#update-btn, input#delete-btn {
+	margin-bottom: 3%;
+	display: inline-block;
+	text-align: right;
+	letter-spacing: 0.1em;
+	color: #fff;
+	background-color: #ed576c;
+	
+}
+
+table{
+  width: 60%;
+  border-collapse:separate;
+  border-spacing: 0;
+}
+
+table th{
+  text-align: center;
+  color: #fff;
+  background-color: #ed576c;
+  width: 25%;
+  padding: 10px 0;
+}
+
+table td{
+  text-align: center;
+  border-top:none;
+  width: 25%;
+  padding: 10px 0;
+}
+
+.form {
+	width: 20%;
+	padding: 0.5em 1em;
+    font-weight: bold;
+    border: solid 3px #ed576c;
+    margin: 10px 5px; 
+}
+
+#do-select {
+	display: flex;
+	text-align: right;
+}
