@@ -1,6 +1,6 @@
 'use strict';
 $(function() {
-
+	// 入力値のチェック
     function check(employeeno, name, department) {
         if (employeeno.length > 3 || parseInt(employeeno) === 0) {
             return false;

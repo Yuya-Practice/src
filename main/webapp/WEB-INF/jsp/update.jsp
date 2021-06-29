@@ -40,8 +40,8 @@
 			</form>
 		</div><!-- /.form -->
 				メッセージ欄
-				<div class="massage" id="update-message">
-				</div><!-- /#update-message.massage -->
+				<div class="message" id="update-message">
+				</div><!-- /#update-message.message -->
 			<div class="back">
 				<button id="to-menu">戻る</button>
 			</div><!-- /.back -->
