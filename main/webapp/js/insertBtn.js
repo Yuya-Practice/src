@@ -39,8 +39,8 @@ $(function() {
                cache : 'false',
                data  : insertData,
            }).done(function(result) {
-               const checker = parseInt(result);
-               if (checker === 1) {
+               const json = JSON.parse(result);
+               if (json.checker) {
                    $('#insert-message').text('正常に登録されました。');
 				   $('#employeeno').val('');
 				   $('#name').val('');
@@ -52,7 +52,7 @@ $(function() {
 				alert('通信エラー');
 		   });
         } else {
-			document.getElementById('select-message').textContent = "";
+			document.getElementById('insert-message').textContent = "";
             window.alert('検索項目の入力に不備があります。');
         }
     });

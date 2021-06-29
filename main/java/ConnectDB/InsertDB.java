@@ -44,19 +44,17 @@ public class InsertDB extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
-		
-		// SQLが更新されたかの確認用
-		int checker = -1;
      	
 		// ｊｓに出力するため
 		PrintWriter out = response.getWriter();
+		String json = "{\"checker\":false}";
 		
 		// ドライバのロード
 		try {
 			Class.forName("org.postgresql.Driver");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
-			out.print(checker);
+			out.print(json);
 		}
 		
 		// 値の受け取り emStringはintへ変換
@@ -71,7 +69,7 @@ public class InsertDB extends HttpServlet {
 		} catch (NumberFormatException e) {
 			e.getStackTrace();
 			// 数値に直せなければ戻す。
-			out.print(checker);
+			out.print(json);
 			out.close();
 		}
 		
@@ -90,7 +88,9 @@ public class InsertDB extends HttpServlet {
 			pStatement.setString(2, employee.getName());
 			pStatement.setString(3, employee.getDepartment());
 			// 更新された行数を取得 1であれば正常
-			checker = pStatement.executeUpdate();
+			if(pStatement.executeUpdate() == 1) {
+				json = "{\"checker\":true}";
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -110,7 +110,7 @@ public class InsertDB extends HttpServlet {
 				}
             }
             // 上手くいってればchecker=1 更新がなければ0, 途中のエラーは-1
-            out.print(checker);
+            out.print(json);
             out.close();
 		}
 	}

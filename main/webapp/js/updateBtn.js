@@ -51,7 +51,7 @@ $(function() {
 				alert('通信エラー');
 		   });
         } else {
-			document.getElementById('select-message').textContent = "";
+			document.getElementById('update-message').textContent = "";
 		    window.alert('検索項目の入力に不備があります。');
 		}
     });
