@@ -82,7 +82,7 @@ public class UpdateDB extends HttpServlet {
 		
 		try {
 			connection = DriverManager.getConnection(Login.DBURL, Login.DBUSER, Login.DBPASS);
-			if (employeeno != 0 || !name.equals("") || !department.equals("")) {
+			if (employeeno != 0 && !name.equals("") && !department.equals("")) {
 				String updateSql = "UPDATE employeemst SET name = ?, department = ? WHERE employeeno = ?";
 				pStatement = connection.prepareStatement(updateSql);
 				pStatement.setString(1, name);

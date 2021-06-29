@@ -54,8 +54,8 @@
 			</tr>
 		</table>
 		メッセージ欄
-		<div class="massage" id="select-message">
-		</div><!-- /#select-message.massage -->
+		<div class="message" id="select-message">
+		</div><!-- /#select-message.message -->
 		<div class="back">
 			<button id="to-menu">戻る</button>
 		</div><!-- /.back -->

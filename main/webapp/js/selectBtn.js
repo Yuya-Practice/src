@@ -1,6 +1,7 @@
 'use strict';
 $(function() {
-
+	
+	// いずれかは入力されていることを確認
     function selectCheck(employeeno, name, department) {
         if (employeeno !== "" || name !== "" || department !== "" ) {
             return true;

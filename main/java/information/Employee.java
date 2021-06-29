@@ -1,5 +1,6 @@
 package information;
 
+// json用の型
 public class Employee {
 	private boolean checker = true;
 	private int employeeno;
